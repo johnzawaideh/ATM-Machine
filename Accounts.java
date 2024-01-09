@@ -1,32 +1,33 @@
 public class Accounts {
-	private int accountName;
-	private int password;
+
+	
+	private int accNum;
+	private int pin;
 	private double balance;
 	
-	public Accounts(int account_Name, int pass, double balance) {
-		accountName = account_Name;
-		password = pass;
-		this.balance = balance;
+	public Accounts(int accountNum, int pin, double balance) {
+	accNum = accountNum;
+	this.pin = pin;
+	this.balance = balance;
+}
+	
+	int getAccountNum() {
+		return accNum;
 	}
 	
-	public int getAccountName() {
-		return accountName;
+	int getPin() {
+		return pin;
 	}
 	
-	public int getPassword() {
-		return password;
-	}
-	
-	public double getBalance() {
+	double getBalance() {
 		return balance;
 	}
 	
-	public void withdraw(double amount) {
-		balance -= amount;
-	}
-	
-	public void deposit(double amount) {
+	void deposit(double amount) {
 		balance += amount;
 	}
+	
+	void withdraw(double amount) {
+		balance -= amount;
 	}
-
+}
